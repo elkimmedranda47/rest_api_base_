@@ -21,6 +21,14 @@ public class HistoriadetalleModel {
     @JoinColumn(name = "colaborador_id")
     private ColaboradorModel colaborador;
 
+
+    @ManyToOne
+    @JoinColumn(name = "historiaclinica_id") // Nombre de la columna que almacenará el id del cliente en la tabla historia_clinica
+    private HistoriaclinicaModel historiaclinica;
+
+    
+
+
     // Constructor, otros métodos y relaciones con otras entidades
 
     // Getters y Setters
@@ -66,6 +74,14 @@ public class HistoriadetalleModel {
         this.colaborador = colaborador;
     }
 
+    // Getters y setters para la relación con Historiadetalle
+    public HistoriaclinicaModel GetHistoriaclinica() {
+        return historiaclinica;
+    }
+
+    public void setHistoriaclinica(HistoriaclinicaModel historiaclinica) {
+        this.historiaclinica = historiaclinica;
+    }
 
     // Otros getters y setters si los necesitas
 }

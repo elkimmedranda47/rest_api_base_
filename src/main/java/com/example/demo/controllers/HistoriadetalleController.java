@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class HistoriadetalleController {
 
     private final HistoriadetalleService historiadetalleService;
-
+    
     @Autowired
     public HistoriadetalleController(HistoriadetalleService historiadetalleService) {
         this.historiadetalleService = historiadetalleService;
